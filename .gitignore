@@ -17,4 +17,6 @@
 /tmp
 
 #Ignore Spring files
+/spring/*.pid
 /spring/*.pd
+

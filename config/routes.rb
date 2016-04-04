@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get 'work' => 'static_pages#work'
   get 'contact' => 'static_pages#contact'
   get 'addUser' => 'users#new'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

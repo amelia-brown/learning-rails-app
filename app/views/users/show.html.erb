@@ -5,4 +5,12 @@
       <%= @user.name %>
     </h1>
   </div>
+  <div class="blog-posts">
+    <% if @user.posts.any? %>
+      <ol class="posts">
+        <%= render @posts %>
+      </ol>
+      <%= will_paginate @posts %>
+    <% end %>
+  </div>
 </div>

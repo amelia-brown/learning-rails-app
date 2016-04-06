@@ -1,3 +1,13 @@
-<% provide(:title, "Home") %>
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, "Home")  %>
+<% if logged_in? %>
+  <section class="user_info">
+    <%= render 'shared/user_info' %>
+  </section>
+  <div class="create-post">
+    <%= render 'shared/post_form' %>
+  </div>
+<% else %>
+  <div class="feed">
+    <%= render 'shared/feed'%>
+  </div>
+<% end %>

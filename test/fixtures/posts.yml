@@ -1,8 +1,20 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 orange:
+  title: orange
   content: "I just ate an orange!"
   created_at: <%= 10.minutes.ago %>
+  user: amelia
 
 most_recent:
+  title: most_recent
   content: "Sad cats are sad: http://youtu.be/Pkffm2uI4dk"
   created_at: <%= Time.zone.now %>
+  user: amelia
+
+<% 30.times do |n| %>
+post_<%= n %>:
+  title: "Title <%= n %>"
+  content: "Content <%= n %>"
+  created_at: <%= 42.days.ago %>
+  user: amelia
+<% end %>

@@ -4,3 +4,7 @@ User.create!(name: "Example User",
              password_confirmation: "foobar",
              activated: true,
              activated_at: Time.zone.now)
+
+User.first.posts.create!(
+  title: "blog post one",
+  content: "my first blog post")

@@ -55,6 +55,10 @@ class User < ActiveRecord::Base
     reset_sent_at < 2.hours.ago
   end
 
+  def feed
+    Post.where("user_id = ?", id)
+  end
+
   private
     def downcase_email
       self.email = email.downcase

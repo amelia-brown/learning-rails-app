@@ -20,3 +20,6 @@
 /spring/*.pid
 /spring/*.pd
 
+# Ignore uploaded test images
+/public/uploads
+
